@@ -26,6 +26,8 @@ jobs:
         run: |
           python3 build_site.py
           mkdocs build
+          # Add root redirect to /docs/
+          echo '<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=/hermes-docs-ru/docs/"><title>Документация Hermes Agent</title></head><body><p>Перенаправление на <a href="/hermes-docs-ru/docs/">документацию Hermes Agent</a>...</p></body></html>' > site/index.html
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
