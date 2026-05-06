@@ -1,53 +1,58 @@
-# Hermes Agent Docs — Russian Translation 🇷🇺
+# Документация Hermes Agent — Перевод на русский 🇷🇺
 
-[![Status](https://img.shields.io/badge/status-100%25%20translated-brightgreen)](https://hermes-agent.nousresearch.com/docs)
+[![Status](https://img.shields.io/badge/статус-100%25%20переведено-brightgreen)](https://hermes-agent.nousresearch.com/docs)
 
-Full Russian translation of the [Hermes Agent](https://hermes-agent.nousresearch.com) documentation — an open-source CLI AI agent by Nous Research.
+Полный перевод документации [Hermes Agent](https://hermes-agent.nousresearch.com) — open-source CLI AI-агента от Nous Research.
 
-## What's Inside
+## Что внутри
 
-- **293 pages** of documentation fully translated from English to Russian
-- All original markdown files preserved in `originals/`
-- All translations in `translated/` with identical directory structure
-- `translation_state.json` — tracks translation progress
-- `update_check.py` — checks for upstream doc changes and syncs new pages
-- `scrape.py` — initial download tool (for fresh setups)
+- **293 страницы** документации, полностью переведённые с английского на русский
+- Все оригинальные markdown-файлы сохранены в `originals/`
+- Все переводы в `translated/` с идентичной структурой директорий
+- `translation_state.json` — отслеживание прогресса перевода
+- `update_check.py` — проверка обновлений оригинальной документации
+- `scrape.py` — инструмент для первичного скачивания
 
-## Project Structure
+## Структура проекта
 
 ```
 ~/hermes-docs-ru/
-├── originals/              # Original .md files (downloaded from docs site)
+├── originals/              # Оригинальные .md файлы (скачанные с сайта)
 │   └── docs/...
-├── translated/             # Russian translations (same structure)
+├── translated/             # Переводы на русский (та же структура)
 │   └── docs/...
 ├── small_batches/
-│   └── _batches.json       # Translation batch definitions
-├── scrape.py               # Download tool
-├── update_check.py         # Incremental update checker
-└── translation_state.json  # Translation progress state
+│   └── _batches.json       # Определения батчей для перевода
+├── scrape.py               # Инструмент скачивания
+├── update_check.py         # Проверка обновлений
+└── translation_state.json  # Состояние перевода
 ```
 
-## How Translation Works
+## Как переводили
 
-The translation is done via AI subagents (`delegate_task` in Hermes Agent), processing 1-2 pages per batch with 3 batches in parallel. Key methodology:
+Перевод выполнен AI-субагентами (`delegate_task` в Hermes Agent), по 1-2 страницы на батч, 3 батча параллельно. Ключевая методология:
 
-1. **Phase A (subagents)** — each reads an original, translates it, saves to `translated/`
-2. **Phase B (parent)** — after all subagents finish, syncs `translated/` with `translation_state.json`
-3. **Split strategy** — files >60KB are split into parts, translated separately, then merged
+1. **Фаза A (субагенты)** — каждый читает оригинал, переводит, сохраняет в `translated/`
+2. **Фаза B (родитель)** — после всех субагентов синхронизирует `translated/` с `translation_state.json`
+3. **Split-стратегия** — файлы >60KB разбиваются на части, переводятся отдельно, затем склеиваются
+4. **Без race condition** — субагенты не пишут в общее состояние, только родитель
 
-## Keeping Up to Date
+## Обновление
 
-When the upstream Hermes Agent documentation gains new pages:
+Когда в документации Hermes Agent появятся новые страницы:
 
 ```bash
 cd ~/hermes-docs-ru
-python3 update_check.py           # check what's new
-python3 update_check.py --apply   # download new pages, prepare for translation
+python3 update_check.py           # проверить, что нового
+python3 update_check.py --apply   # скачать новое, подготовить к переводу
 ```
 
-Then run the translate workflow for only the new/changed pages.
+Затем запустить workflow перевода только для новых/изменённых страниц.
 
-## License
+## English version
 
-The translated content is provided under the same terms as the original Hermes Agent documentation.
+For the English description of this project, see [README.en.md](README.en.md).
+
+## Лицензия
+
+Переведённый контент распространяется на тех же условиях, что и оригинальная документация Hermes Agent.
