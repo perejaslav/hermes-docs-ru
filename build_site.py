@@ -12,7 +12,7 @@ import json
 import shutil
 from pathlib import Path
 
-BASE_DIR = Path("/home/immor/hermes-docs-ru")
+BASE_DIR = Path(__file__).parent.resolve()
 TRANSLATED_DIR = BASE_DIR / "translated"
 STAGING_DIR = BASE_DIR / "site_source"
 STATE_FILE = BASE_DIR / "translation_state.json"
