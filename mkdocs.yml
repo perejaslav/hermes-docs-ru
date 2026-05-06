@@ -1,0 +1,560 @@
+# MkDocs config — auto-generated from translated docs
+site_name: Документация Hermes Agent
+site_description: Полный перевод документации Hermes Agent на русский язык
+site_url: https://perejaslav.github.io/hermes-docs-ru/
+repo_url: https://github.com/perejaslav/hermes-docs-ru
+edit_uri: blob/main/translated/
+docs_dir: site_source
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Переключить на тёмную тему
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Переключить на светлую тему
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    logo: material/book-open-variant
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/perejaslav/hermes-docs-ru
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/NousResearch
+  generator: false
+
+copyright: Copyright &copy; 2025-2026 Nous Research — перевод сообщества
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+      title: На этой странице
+  - attr_list
+  - md_in_html
+
+nav:
+- Начало работы:
+  - "Installation": docs/getting-started/installation.md
+  - "Path": docs/getting-started/learning-path.md
+  - "Setup": docs/getting-started/nix-setup.md
+  - "Quickstart": docs/getting-started/quickstart.md
+  - "Termux": docs/getting-started/termux.md
+  - "Updating": docs/getting-started/updating.md
+- Возможности:
+  - "ACP": docs/user-guide/features/acp.md
+  - "Server": docs/user-guide/features/api-server.md
+  - "Processing": docs/user-guide/features/batch-processing.md
+  - "Browser": docs/user-guide/features/browser.md
+  - "In Plugins": docs/user-guide/features/built-in-plugins.md
+  - "Execution": docs/user-guide/features/code-execution.md
+  - "Files": docs/user-guide/features/context-files.md
+  - "References": docs/user-guide/features/context-references.md
+  - "Pools": docs/user-guide/features/credential-pools.md
+  - "Cron": docs/user-guide/features/cron.md
+  - "Curator": docs/user-guide/features/curator.md
+  - "Delegation": docs/user-guide/features/delegation.md
+  - "The Dashboard": docs/user-guide/features/extending-the-dashboard.md
+  - "Providers": docs/user-guide/features/fallback-providers.md
+  - "Goals": docs/user-guide/features/goals.md
+  - "Honcho": docs/user-guide/features/honcho.md
+  - "Hooks": docs/user-guide/features/hooks.md
+  - "Generation": docs/user-guide/features/image-generation.md
+  - "Tutorial": docs/user-guide/features/kanban-tutorial.md
+  - "Kanban": docs/user-guide/features/kanban.md
+  - "MCP": docs/user-guide/features/mcp.md
+  - "Providers": docs/user-guide/features/memory-providers.md
+  - "Memory": docs/user-guide/features/memory.md
+  - "Overview": docs/user-guide/features/overview.md
+  - "Personality": docs/user-guide/features/personality.md
+  - "Plugins": docs/user-guide/features/plugins.md
+  - "Routing": docs/user-guide/features/provider-routing.md
+  - "Training": docs/user-guide/features/rl-training.md
+  - "Skills": docs/user-guide/features/skills.md
+  - "Skins": docs/user-guide/features/skins.md
+  - "Spotify": docs/user-guide/features/spotify.md
+  - "Gateway": docs/user-guide/features/tool-gateway.md
+  - "Tools": docs/user-guide/features/tools.md
+  - "TTS": docs/user-guide/features/tts.md
+  - "Vision": docs/user-guide/features/vision.md
+  - "Mode": docs/user-guide/features/voice-mode.md
+  - "Dashboard": docs/user-guide/features/web-dashboard.md
+  - "Search": docs/user-guide/features/web-search.md
+- "Конфигурация": docs/user-guide/configuration.md
+- "CLI": docs/user-guide/cli.md
+- "TUI": docs/user-guide/tui.md
+- "Профили": docs/user-guide/profiles.md
+- "Сессии": docs/user-guide/sessions.md
+- "Безопасность": docs/user-guide/security.md
+- "Docker": docs/user-guide/docker.md
+- "Git Worktrees": docs/user-guide/git-worktrees.md
+- "Контрольные точки": docs/user-guide/checkpoints-and-rollback.md
+- Мессенджеры:
+  - "Обзор": docs/user-guide/messaging/index.md
+  - "Bluebubbles": docs/user-guide/messaging/bluebubbles.md
+  - "Dingtalk": docs/user-guide/messaging/dingtalk.md
+  - "Discord": docs/user-guide/messaging/discord.md
+  - "Email": docs/user-guide/messaging/email.md
+  - "Feishu": docs/user-guide/messaging/feishu.md
+  - "Homeassistant": docs/user-guide/messaging/homeassistant.md
+  - "Matrix": docs/user-guide/messaging/matrix.md
+  - "Mattermost": docs/user-guide/messaging/mattermost.md
+  - "Webui": docs/user-guide/messaging/open-webui.md
+  - "Qqbot": docs/user-guide/messaging/qqbot.md
+  - "Signal": docs/user-guide/messaging/signal.md
+  - "Slack": docs/user-guide/messaging/slack.md
+  - "Sms": docs/user-guide/messaging/sms.md
+  - "Teams": docs/user-guide/messaging/teams.md
+  - "Telegram": docs/user-guide/messaging/telegram.md
+  - "Webhooks": docs/user-guide/messaging/webhooks.md
+  - "Callback": docs/user-guide/messaging/wecom-callback.md
+  - "Wecom": docs/user-guide/messaging/wecom.md
+  - "Weixin": docs/user-guide/messaging/weixin.md
+  - "Whatsapp": docs/user-guide/messaging/whatsapp.md
+  - "Yuanbao": docs/user-guide/messaging/yuanbao.md
+- Навыки (встроенные):
+  - Apple:
+    - "Apple Notes": docs/user-guide/skills/bundled/apple/apple-apple-notes.md
+    - "Apple Reminders": docs/user-guide/skills/bundled/apple/apple-apple-reminders.md
+    - "Findmy": docs/user-guide/skills/bundled/apple/apple-findmy.md
+    - "Imessage": docs/user-guide/skills/bundled/apple/apple-imessage.md
+  - Ai Agents:
+    - "Ai Agents Claude Code": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code.md
+    - "Ai Agents Codex": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-codex.md
+    - "Ai Agents Hermes Agent": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent.md
+    - "Ai Agents Opencode": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-opencode.md
+  - Creative:
+    - "Architecture Diagram": docs/user-guide/skills/bundled/creative/creative-architecture-diagram.md
+    - "Ascii Art": docs/user-guide/skills/bundled/creative/creative-ascii-art.md
+    - "Ascii Video": docs/user-guide/skills/bundled/creative/creative-ascii-video.md
+    - "Baoyu Comic": docs/user-guide/skills/bundled/creative/creative-baoyu-comic.md
+    - "Baoyu Infographic": docs/user-guide/skills/bundled/creative/creative-baoyu-infographic.md
+    - "Claude Design": docs/user-guide/skills/bundled/creative/creative-claude-design.md
+    - "Comfyui": docs/user-guide/skills/bundled/creative/creative-comfyui.md
+    - "Creative Ideation": docs/user-guide/skills/bundled/creative/creative-creative-ideation.md
+    - "Design Md": docs/user-guide/skills/bundled/creative/creative-design-md.md
+    - "Excalidraw": docs/user-guide/skills/bundled/creative/creative-excalidraw.md
+    - "Humanizer": docs/user-guide/skills/bundled/creative/creative-humanizer.md
+    - "Manim Video": docs/user-guide/skills/bundled/creative/creative-manim-video.md
+    - "P5Js": docs/user-guide/skills/bundled/creative/creative-p5js.md
+    - "Pixel Art": docs/user-guide/skills/bundled/creative/creative-pixel-art.md
+    - "Popular Web Designs": docs/user-guide/skills/bundled/creative/creative-popular-web-designs.md
+    - "Pretext": docs/user-guide/skills/bundled/creative/creative-pretext.md
+    - "Sketch": docs/user-guide/skills/bundled/creative/creative-sketch.md
+    - "Songwriting And Ai Music": docs/user-guide/skills/bundled/creative/creative-songwriting-and-ai-music.md
+    - "Touchdesigner MCP": docs/user-guide/skills/bundled/creative/creative-touchdesigner-mcp.md
+  - Science:
+    - "Science Jupyter Live Kernel": docs/user-guide/skills/bundled/data-science/data-science-jupyter-live-kernel.md
+  - Devops:
+    - "Kanban Orchestrator": docs/user-guide/skills/bundled/devops/devops-kanban-orchestrator.md
+    - "Kanban Worker": docs/user-guide/skills/bundled/devops/devops-kanban-worker.md
+    - "Webhook Subscriptions": docs/user-guide/skills/bundled/devops/devops-webhook-subscriptions.md
+  - Dogfood:
+    - "Dogfood": docs/user-guide/skills/bundled/dogfood/dogfood-dogfood.md
+  - Email:
+    - "Himalaya": docs/user-guide/skills/bundled/email/email-himalaya.md
+  - Gaming:
+    - "Minecraft Modpack Server": docs/user-guide/skills/bundled/gaming/gaming-minecraft-modpack-server.md
+    - "Pokemon Player": docs/user-guide/skills/bundled/gaming/gaming-pokemon-player.md
+  - Github:
+    - "Codebase Inspection": docs/user-guide/skills/bundled/github/github-codebase-inspection.md
+    - "Github Auth": docs/user-guide/skills/bundled/github/github-github-auth.md
+    - "Github Code Review": docs/user-guide/skills/bundled/github/github-github-code-review.md
+    - "Github Issues": docs/user-guide/skills/bundled/github/github-github-issues.md
+    - "Github Pr Workflow": docs/user-guide/skills/bundled/github/github-github-pr-workflow.md
+    - "Github Repo Management": docs/user-guide/skills/bundled/github/github-github-repo-management.md
+  - MCP:
+    - "Native MCP": docs/user-guide/skills/bundled/mcp/mcp-native-mcp.md
+  - Media:
+    - "Gif Search": docs/user-guide/skills/bundled/media/media-gif-search.md
+    - "Heartmula": docs/user-guide/skills/bundled/media/media-heartmula.md
+    - "Songsee": docs/user-guide/skills/bundled/media/media-songsee.md
+    - "Spotify": docs/user-guide/skills/bundled/media/media-spotify.md
+    - "Youtube Content": docs/user-guide/skills/bundled/media/media-youtube-content.md
+  - MLOps:
+    - "Evaluation Lm Evaluation Harness": docs/user-guide/skills/bundled/mlops/mlops-evaluation-lm-evaluation-harness.md
+    - "Evaluation Weights And Biases": docs/user-guide/skills/bundled/mlops/mlops-evaluation-weights-and-biases.md
+    - "Huggingface Hub": docs/user-guide/skills/bundled/mlops/mlops-huggingface-hub.md
+    - "Inference Llama Cpp": docs/user-guide/skills/bundled/mlops/mlops-inference-llama-cpp.md
+    - "Inference Obliteratus": docs/user-guide/skills/bundled/mlops/mlops-inference-obliteratus.md
+    - "Inference Outlines": docs/user-guide/skills/bundled/mlops/mlops-inference-outlines.md
+    - "Inference Vllm": docs/user-guide/skills/bundled/mlops/mlops-inference-vllm.md
+    - "Models Audiocraft": docs/user-guide/skills/bundled/mlops/mlops-models-audiocraft.md
+    - "Models Segment Anything": docs/user-guide/skills/bundled/mlops/mlops-models-segment-anything.md
+    - "Research Dspy": docs/user-guide/skills/bundled/mlops/mlops-research-dspy.md
+    - "Training Axolotl": docs/user-guide/skills/bundled/mlops/mlops-training-axolotl.md
+    - "Training Trl Fine Tuning": docs/user-guide/skills/bundled/mlops/mlops-training-trl-fine-tuning.md
+    - "Training Unsloth": docs/user-guide/skills/bundled/mlops/mlops-training-unsloth.md
+  - Taking:
+    - "Taking Obsidian": docs/user-guide/skills/bundled/note-taking/note-taking-obsidian.md
+  - Productivity:
+    - "Airtable": docs/user-guide/skills/bundled/productivity/productivity-airtable.md
+    - "Google Workspace": docs/user-guide/skills/bundled/productivity/productivity-google-workspace.md
+    - "Linear": docs/user-guide/skills/bundled/productivity/productivity-linear.md
+    - "Maps": docs/user-guide/skills/bundled/productivity/productivity-maps.md
+    - "Nano Pdf": docs/user-guide/skills/bundled/productivity/productivity-nano-pdf.md
+    - "Notion": docs/user-guide/skills/bundled/productivity/productivity-notion.md
+    - "Ocr And Documents": docs/user-guide/skills/bundled/productivity/productivity-ocr-and-documents.md
+    - "Powerpoint": docs/user-guide/skills/bundled/productivity/productivity-powerpoint.md
+  - Teaming:
+    - "Teaming Godmode": docs/user-guide/skills/bundled/red-teaming/red-teaming-godmode.md
+  - Research:
+    - "Arxiv": docs/user-guide/skills/bundled/research/research-arxiv.md
+    - "Blogwatcher": docs/user-guide/skills/bundled/research/research-blogwatcher.md
+    - "Llm Wiki": docs/user-guide/skills/bundled/research/research-llm-wiki.md
+    - "Polymarket": docs/user-guide/skills/bundled/research/research-polymarket.md
+    - "Research Paper Writing": docs/user-guide/skills/bundled/research/research-research-paper-writing.md
+  - Home:
+    - "Home Openhue": docs/user-guide/skills/bundled/smart-home/smart-home-openhue.md
+  - Media:
+    - "Media Xurl": docs/user-guide/skills/bundled/social-media/social-media-xurl.md
+  - Development:
+    - "Development Debugging Hermes TUI Commands": docs/user-guide/skills/bundled/software-development/software-development-debugging-hermes-tui-commands.md
+    - "Development Hermes Agent Skill Authoring": docs/user-guide/skills/bundled/software-development/software-development-hermes-agent-skill-authoring.md
+    - "Development Node Inspect Debugger": docs/user-guide/skills/bundled/software-development/software-development-node-inspect-debugger.md
+    - "Development Plan": docs/user-guide/skills/bundled/software-development/software-development-plan.md
+    - "Development Python Debugpy": docs/user-guide/skills/bundled/software-development/software-development-python-debugpy.md
+    - "Development Requesting Code Review": docs/user-guide/skills/bundled/software-development/software-development-requesting-code-review.md
+    - "Development Spike": docs/user-guide/skills/bundled/software-development/software-development-spike.md
+    - "Development Subagent Driven Development": docs/user-guide/skills/bundled/software-development/software-development-subagent-driven-development.md
+    - "Development Systematic Debugging": docs/user-guide/skills/bundled/software-development/software-development-systematic-debugging.md
+    - "Development Test Driven Development": docs/user-guide/skills/bundled/software-development/software-development-test-driven-development.md
+    - "Development Writing Plans": docs/user-guide/skills/bundled/software-development/software-development-writing-plans.md
+  - Yuanbao:
+    - "Yuanbao": docs/user-guide/skills/bundled/yuanbao/yuanbao-yuanbao.md
+- Навыки (опциональные):
+  - Ai Agents:
+    - "Ai Agents Blackbox": docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-blackbox.md
+    - "Ai Agents Honcho": docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-honcho.md
+  - Blockchain:
+    - "Base": docs/user-guide/skills/optional/blockchain/blockchain-base.md
+    - "Solana": docs/user-guide/skills/optional/blockchain/blockchain-solana.md
+  - Communication:
+    - "One Three One Rule": docs/user-guide/skills/optional/communication/communication-one-three-one-rule.md
+  - Creative:
+    - "Blender MCP": docs/user-guide/skills/optional/creative/creative-blender-mcp.md
+    - "Concept Diagrams": docs/user-guide/skills/optional/creative/creative-concept-diagrams.md
+    - "Hyperframes": docs/user-guide/skills/optional/creative/creative-hyperframes.md
+    - "Kanban Video Orchestrator": docs/user-guide/skills/optional/creative/creative-kanban-video-orchestrator.md
+    - "Meme Generation": docs/user-guide/skills/optional/creative/creative-meme-generation.md
+  - Devops:
+    - "CLI": docs/user-guide/skills/optional/devops/devops-cli.md
+    - "Docker Management": docs/user-guide/skills/optional/devops/devops-docker-management.md
+  - Dogfood:
+    - "Adversarial Ux Test": docs/user-guide/skills/optional/dogfood/dogfood-adversarial-ux-test.md
+  - Email:
+    - "Agentmail": docs/user-guide/skills/optional/email/email-agentmail.md
+  - Health:
+    - "Fitness Nutrition": docs/user-guide/skills/optional/health/health-fitness-nutrition.md
+    - "Neuroskill Bci": docs/user-guide/skills/optional/health/health-neuroskill-bci.md
+  - MCP:
+    - "Fastmcp": docs/user-guide/skills/optional/mcp/mcp-fastmcp.md
+    - "MCPorter": docs/user-guide/skills/optional/mcp/mcp-mcporter.md
+  - Migration:
+    - "Openclaw Migration": docs/user-guide/skills/optional/migration/migration-openclaw-migration.md
+  - MLOps:
+    - "Accelerate": docs/user-guide/skills/optional/mlops/mlops-accelerate.md
+    - "Chroma": docs/user-guide/skills/optional/mlops/mlops-chroma.md
+    - "CLIp": docs/user-guide/skills/optional/mlops/mlops-clip.md
+    - "Faiss": docs/user-guide/skills/optional/mlops/mlops-faiss.md
+    - "Flash Attention": docs/user-guide/skills/optional/mlops/mlops-flash-attention.md
+    - "Guidance": docs/user-guide/skills/optional/mlops/mlops-guidance.md
+    - "Hermes Atropos Environments": docs/user-guide/skills/optional/mlops/mlops-hermes-atropos-environments.md
+    - "Huggingface Tokenizers": docs/user-guide/skills/optional/mlops/mlops-huggingface-tokenizers.md
+    - "Instructor": docs/user-guide/skills/optional/mlops/mlops-instructor.md
+    - "Lambda Labs": docs/user-guide/skills/optional/mlops/mlops-lambda-labs.md
+    - "Llava": docs/user-guide/skills/optional/mlops/mlops-llava.md
+    - "Modal": docs/user-guide/skills/optional/mlops/mlops-modal.md
+    - "Nemo Curator": docs/user-guide/skills/optional/mlops/mlops-nemo-curator.md
+    - "Peft": docs/user-guide/skills/optional/mlops/mlops-peft.md
+    - "Pinecone": docs/user-guide/skills/optional/mlops/mlops-pinecone.md
+    - "Pytorch Fsdp": docs/user-guide/skills/optional/mlops/mlops-pytorch-fsdp.md
+    - "Pytorch Lightning": docs/user-guide/skills/optional/mlops/mlops-pytorch-lightning.md
+    - "Qdrant": docs/user-guide/skills/optional/mlops/mlops-qdrant.md
+    - "Saelens": docs/user-guide/skills/optional/mlops/mlops-saelens.md
+    - "Simpo": docs/user-guide/skills/optional/mlops/mlops-simpo.md
+    - "Slime": docs/user-guide/skills/optional/mlops/mlops-slime.md
+    - "Stable Diffusion": docs/user-guide/skills/optional/mlops/mlops-stable-diffusion.md
+    - "Tensorrt Llm": docs/user-guide/skills/optional/mlops/mlops-tensorrt-llm.md
+    - "Torchtitan": docs/user-guide/skills/optional/mlops/mlops-torchtitan.md
+    - "Whisper": docs/user-guide/skills/optional/mlops/mlops-whisper.md
+  - Productivity:
+    - "Canvas": docs/user-guide/skills/optional/productivity/productivity-canvas.md
+    - "Here Now": docs/user-guide/skills/optional/productivity/productivity-here-now.md
+    - "Memento Flashcards": docs/user-guide/skills/optional/productivity/productivity-memento-flashcards.md
+    - "Shop App": docs/user-guide/skills/optional/productivity/productivity-shop-app.md
+    - "Shopify": docs/user-guide/skills/optional/productivity/productivity-shopify.md
+    - "Siyuan": docs/user-guide/skills/optional/productivity/productivity-siyuan.md
+    - "Telephony": docs/user-guide/skills/optional/productivity/productivity-telephony.md
+  - Research:
+    - "Bioinformatics": docs/user-guide/skills/optional/research/research-bioinformatics.md
+    - "Domain Intel": docs/user-guide/skills/optional/research/research-domain-intel.md
+    - "Drug Discovery": docs/user-guide/skills/optional/research/research-drug-discovery.md
+    - "Duckduckgo Search": docs/user-guide/skills/optional/research/research-duckduckgo-search.md
+    - "Gitnexus Explorer": docs/user-guide/skills/optional/research/research-gitnexus-explorer.md
+    - "Parallel CLI": docs/user-guide/skills/optional/research/research-parallel-cli.md
+    - "Qmd": docs/user-guide/skills/optional/research/research-qmd.md
+    - "Scrapling": docs/user-guide/skills/optional/research/research-scrapling.md
+    - "Searxng Search": docs/user-guide/skills/optional/research/research-searxng-search.md
+  - Security:
+    - "1Password": docs/user-guide/skills/optional/security/security-1password.md
+    - "Oss Forensics": docs/user-guide/skills/optional/security/security-oss-forensics.md
+    - "Sherlock": docs/user-guide/skills/optional/security/security-sherlock.md
+  - Development:
+    - "Development Page Agent": docs/user-guide/skills/optional/web-development/web-development-page-agent.md
+- Обзор навыков:
+  - Bundled:
+    - "Apple Notes": docs/user-guide/skills/bundled/apple/apple-apple-notes.md
+    - "Apple Reminders": docs/user-guide/skills/bundled/apple/apple-apple-reminders.md
+    - "Findmy": docs/user-guide/skills/bundled/apple/apple-findmy.md
+    - "Imessage": docs/user-guide/skills/bundled/apple/apple-imessage.md
+    - "Ai Agents Claude Code": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code.md
+    - "Ai Agents Codex": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-codex.md
+    - "Ai Agents Hermes Agent": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent.md
+    - "Ai Agents Opencode": docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-opencode.md
+    - "Architecture Diagram": docs/user-guide/skills/bundled/creative/creative-architecture-diagram.md
+    - "Ascii Art": docs/user-guide/skills/bundled/creative/creative-ascii-art.md
+    - "Ascii Video": docs/user-guide/skills/bundled/creative/creative-ascii-video.md
+    - "Baoyu Comic": docs/user-guide/skills/bundled/creative/creative-baoyu-comic.md
+    - "Baoyu Infographic": docs/user-guide/skills/bundled/creative/creative-baoyu-infographic.md
+    - "Claude Design": docs/user-guide/skills/bundled/creative/creative-claude-design.md
+    - "Comfyui": docs/user-guide/skills/bundled/creative/creative-comfyui.md
+    - "Creative Ideation": docs/user-guide/skills/bundled/creative/creative-creative-ideation.md
+    - "Design Md": docs/user-guide/skills/bundled/creative/creative-design-md.md
+    - "Excalidraw": docs/user-guide/skills/bundled/creative/creative-excalidraw.md
+    - "Humanizer": docs/user-guide/skills/bundled/creative/creative-humanizer.md
+    - "Manim Video": docs/user-guide/skills/bundled/creative/creative-manim-video.md
+    - "P5Js": docs/user-guide/skills/bundled/creative/creative-p5js.md
+    - "Pixel Art": docs/user-guide/skills/bundled/creative/creative-pixel-art.md
+    - "Popular Web Designs": docs/user-guide/skills/bundled/creative/creative-popular-web-designs.md
+    - "Pretext": docs/user-guide/skills/bundled/creative/creative-pretext.md
+    - "Sketch": docs/user-guide/skills/bundled/creative/creative-sketch.md
+    - "Songwriting And Ai Music": docs/user-guide/skills/bundled/creative/creative-songwriting-and-ai-music.md
+    - "Touchdesigner MCP": docs/user-guide/skills/bundled/creative/creative-touchdesigner-mcp.md
+    - "Science Jupyter Live Kernel": docs/user-guide/skills/bundled/data-science/data-science-jupyter-live-kernel.md
+    - "Kanban Orchestrator": docs/user-guide/skills/bundled/devops/devops-kanban-orchestrator.md
+    - "Kanban Worker": docs/user-guide/skills/bundled/devops/devops-kanban-worker.md
+    - "Webhook Subscriptions": docs/user-guide/skills/bundled/devops/devops-webhook-subscriptions.md
+    - "Dogfood": docs/user-guide/skills/bundled/dogfood/dogfood-dogfood.md
+    - "Himalaya": docs/user-guide/skills/bundled/email/email-himalaya.md
+    - "Minecraft Modpack Server": docs/user-guide/skills/bundled/gaming/gaming-minecraft-modpack-server.md
+    - "Pokemon Player": docs/user-guide/skills/bundled/gaming/gaming-pokemon-player.md
+    - "Codebase Inspection": docs/user-guide/skills/bundled/github/github-codebase-inspection.md
+    - "Github Auth": docs/user-guide/skills/bundled/github/github-github-auth.md
+    - "Github Code Review": docs/user-guide/skills/bundled/github/github-github-code-review.md
+    - "Github Issues": docs/user-guide/skills/bundled/github/github-github-issues.md
+    - "Github Pr Workflow": docs/user-guide/skills/bundled/github/github-github-pr-workflow.md
+    - "Github Repo Management": docs/user-guide/skills/bundled/github/github-github-repo-management.md
+    - "Native MCP": docs/user-guide/skills/bundled/mcp/mcp-native-mcp.md
+    - "Gif Search": docs/user-guide/skills/bundled/media/media-gif-search.md
+    - "Heartmula": docs/user-guide/skills/bundled/media/media-heartmula.md
+    - "Songsee": docs/user-guide/skills/bundled/media/media-songsee.md
+    - "Spotify": docs/user-guide/skills/bundled/media/media-spotify.md
+    - "Youtube Content": docs/user-guide/skills/bundled/media/media-youtube-content.md
+    - "Evaluation Lm Evaluation Harness": docs/user-guide/skills/bundled/mlops/mlops-evaluation-lm-evaluation-harness.md
+    - "Evaluation Weights And Biases": docs/user-guide/skills/bundled/mlops/mlops-evaluation-weights-and-biases.md
+    - "Huggingface Hub": docs/user-guide/skills/bundled/mlops/mlops-huggingface-hub.md
+    - "Inference Llama Cpp": docs/user-guide/skills/bundled/mlops/mlops-inference-llama-cpp.md
+    - "Inference Obliteratus": docs/user-guide/skills/bundled/mlops/mlops-inference-obliteratus.md
+    - "Inference Outlines": docs/user-guide/skills/bundled/mlops/mlops-inference-outlines.md
+    - "Inference Vllm": docs/user-guide/skills/bundled/mlops/mlops-inference-vllm.md
+    - "Models Audiocraft": docs/user-guide/skills/bundled/mlops/mlops-models-audiocraft.md
+    - "Models Segment Anything": docs/user-guide/skills/bundled/mlops/mlops-models-segment-anything.md
+    - "Research Dspy": docs/user-guide/skills/bundled/mlops/mlops-research-dspy.md
+    - "Training Axolotl": docs/user-guide/skills/bundled/mlops/mlops-training-axolotl.md
+    - "Training Trl Fine Tuning": docs/user-guide/skills/bundled/mlops/mlops-training-trl-fine-tuning.md
+    - "Training Unsloth": docs/user-guide/skills/bundled/mlops/mlops-training-unsloth.md
+    - "Taking Obsidian": docs/user-guide/skills/bundled/note-taking/note-taking-obsidian.md
+    - "Airtable": docs/user-guide/skills/bundled/productivity/productivity-airtable.md
+    - "Google Workspace": docs/user-guide/skills/bundled/productivity/productivity-google-workspace.md
+    - "Linear": docs/user-guide/skills/bundled/productivity/productivity-linear.md
+    - "Maps": docs/user-guide/skills/bundled/productivity/productivity-maps.md
+    - "Nano Pdf": docs/user-guide/skills/bundled/productivity/productivity-nano-pdf.md
+    - "Notion": docs/user-guide/skills/bundled/productivity/productivity-notion.md
+    - "Ocr And Documents": docs/user-guide/skills/bundled/productivity/productivity-ocr-and-documents.md
+    - "Powerpoint": docs/user-guide/skills/bundled/productivity/productivity-powerpoint.md
+    - "Teaming Godmode": docs/user-guide/skills/bundled/red-teaming/red-teaming-godmode.md
+    - "Arxiv": docs/user-guide/skills/bundled/research/research-arxiv.md
+    - "Blogwatcher": docs/user-guide/skills/bundled/research/research-blogwatcher.md
+    - "Llm Wiki": docs/user-guide/skills/bundled/research/research-llm-wiki.md
+    - "Polymarket": docs/user-guide/skills/bundled/research/research-polymarket.md
+    - "Research Paper Writing": docs/user-guide/skills/bundled/research/research-research-paper-writing.md
+    - "Home Openhue": docs/user-guide/skills/bundled/smart-home/smart-home-openhue.md
+    - "Media Xurl": docs/user-guide/skills/bundled/social-media/social-media-xurl.md
+    - "Development Debugging Hermes TUI Commands": docs/user-guide/skills/bundled/software-development/software-development-debugging-hermes-tui-commands.md
+    - "Development Hermes Agent Skill Authoring": docs/user-guide/skills/bundled/software-development/software-development-hermes-agent-skill-authoring.md
+    - "Development Node Inspect Debugger": docs/user-guide/skills/bundled/software-development/software-development-node-inspect-debugger.md
+    - "Development Plan": docs/user-guide/skills/bundled/software-development/software-development-plan.md
+    - "Development Python Debugpy": docs/user-guide/skills/bundled/software-development/software-development-python-debugpy.md
+    - "Development Requesting Code Review": docs/user-guide/skills/bundled/software-development/software-development-requesting-code-review.md
+    - "Development Spike": docs/user-guide/skills/bundled/software-development/software-development-spike.md
+    - "Development Subagent Driven Development": docs/user-guide/skills/bundled/software-development/software-development-subagent-driven-development.md
+    - "Development Systematic Debugging": docs/user-guide/skills/bundled/software-development/software-development-systematic-debugging.md
+    - "Development Test Driven Development": docs/user-guide/skills/bundled/software-development/software-development-test-driven-development.md
+    - "Development Writing Plans": docs/user-guide/skills/bundled/software-development/software-development-writing-plans.md
+    - "Yuanbao": docs/user-guide/skills/bundled/yuanbao/yuanbao-yuanbao.md
+  - "Godmode": docs/user-guide/skills/godmode.md
+  - "Workspace": docs/user-guide/skills/google-workspace.md
+  - Optional:
+    - "Ai Agents Blackbox": docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-blackbox.md
+    - "Ai Agents Honcho": docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-honcho.md
+    - "Base": docs/user-guide/skills/optional/blockchain/blockchain-base.md
+    - "Solana": docs/user-guide/skills/optional/blockchain/blockchain-solana.md
+    - "One Three One Rule": docs/user-guide/skills/optional/communication/communication-one-three-one-rule.md
+    - "Blender MCP": docs/user-guide/skills/optional/creative/creative-blender-mcp.md
+    - "Concept Diagrams": docs/user-guide/skills/optional/creative/creative-concept-diagrams.md
+    - "Hyperframes": docs/user-guide/skills/optional/creative/creative-hyperframes.md
+    - "Kanban Video Orchestrator": docs/user-guide/skills/optional/creative/creative-kanban-video-orchestrator.md
+    - "Meme Generation": docs/user-guide/skills/optional/creative/creative-meme-generation.md
+    - "CLI": docs/user-guide/skills/optional/devops/devops-cli.md
+    - "Docker Management": docs/user-guide/skills/optional/devops/devops-docker-management.md
+    - "Adversarial Ux Test": docs/user-guide/skills/optional/dogfood/dogfood-adversarial-ux-test.md
+    - "Agentmail": docs/user-guide/skills/optional/email/email-agentmail.md
+    - "Fitness Nutrition": docs/user-guide/skills/optional/health/health-fitness-nutrition.md
+    - "Neuroskill Bci": docs/user-guide/skills/optional/health/health-neuroskill-bci.md
+    - "Fastmcp": docs/user-guide/skills/optional/mcp/mcp-fastmcp.md
+    - "MCPorter": docs/user-guide/skills/optional/mcp/mcp-mcporter.md
+    - "Openclaw Migration": docs/user-guide/skills/optional/migration/migration-openclaw-migration.md
+    - "Accelerate": docs/user-guide/skills/optional/mlops/mlops-accelerate.md
+    - "Chroma": docs/user-guide/skills/optional/mlops/mlops-chroma.md
+    - "CLIp": docs/user-guide/skills/optional/mlops/mlops-clip.md
+    - "Faiss": docs/user-guide/skills/optional/mlops/mlops-faiss.md
+    - "Flash Attention": docs/user-guide/skills/optional/mlops/mlops-flash-attention.md
+    - "Guidance": docs/user-guide/skills/optional/mlops/mlops-guidance.md
+    - "Hermes Atropos Environments": docs/user-guide/skills/optional/mlops/mlops-hermes-atropos-environments.md
+    - "Huggingface Tokenizers": docs/user-guide/skills/optional/mlops/mlops-huggingface-tokenizers.md
+    - "Instructor": docs/user-guide/skills/optional/mlops/mlops-instructor.md
+    - "Lambda Labs": docs/user-guide/skills/optional/mlops/mlops-lambda-labs.md
+    - "Llava": docs/user-guide/skills/optional/mlops/mlops-llava.md
+    - "Modal": docs/user-guide/skills/optional/mlops/mlops-modal.md
+    - "Nemo Curator": docs/user-guide/skills/optional/mlops/mlops-nemo-curator.md
+    - "Peft": docs/user-guide/skills/optional/mlops/mlops-peft.md
+    - "Pinecone": docs/user-guide/skills/optional/mlops/mlops-pinecone.md
+    - "Pytorch Fsdp": docs/user-guide/skills/optional/mlops/mlops-pytorch-fsdp.md
+    - "Pytorch Lightning": docs/user-guide/skills/optional/mlops/mlops-pytorch-lightning.md
+    - "Qdrant": docs/user-guide/skills/optional/mlops/mlops-qdrant.md
+    - "Saelens": docs/user-guide/skills/optional/mlops/mlops-saelens.md
+    - "Simpo": docs/user-guide/skills/optional/mlops/mlops-simpo.md
+    - "Slime": docs/user-guide/skills/optional/mlops/mlops-slime.md
+    - "Stable Diffusion": docs/user-guide/skills/optional/mlops/mlops-stable-diffusion.md
+    - "Tensorrt Llm": docs/user-guide/skills/optional/mlops/mlops-tensorrt-llm.md
+    - "Torchtitan": docs/user-guide/skills/optional/mlops/mlops-torchtitan.md
+    - "Whisper": docs/user-guide/skills/optional/mlops/mlops-whisper.md
+    - "Canvas": docs/user-guide/skills/optional/productivity/productivity-canvas.md
+    - "Here Now": docs/user-guide/skills/optional/productivity/productivity-here-now.md
+    - "Memento Flashcards": docs/user-guide/skills/optional/productivity/productivity-memento-flashcards.md
+    - "Shop App": docs/user-guide/skills/optional/productivity/productivity-shop-app.md
+    - "Shopify": docs/user-guide/skills/optional/productivity/productivity-shopify.md
+    - "Siyuan": docs/user-guide/skills/optional/productivity/productivity-siyuan.md
+    - "Telephony": docs/user-guide/skills/optional/productivity/productivity-telephony.md
+    - "Bioinformatics": docs/user-guide/skills/optional/research/research-bioinformatics.md
+    - "Domain Intel": docs/user-guide/skills/optional/research/research-domain-intel.md
+    - "Drug Discovery": docs/user-guide/skills/optional/research/research-drug-discovery.md
+    - "Duckduckgo Search": docs/user-guide/skills/optional/research/research-duckduckgo-search.md
+    - "Gitnexus Explorer": docs/user-guide/skills/optional/research/research-gitnexus-explorer.md
+    - "Parallel CLI": docs/user-guide/skills/optional/research/research-parallel-cli.md
+    - "Qmd": docs/user-guide/skills/optional/research/research-qmd.md
+    - "Scrapling": docs/user-guide/skills/optional/research/research-scrapling.md
+    - "Searxng Search": docs/user-guide/skills/optional/research/research-searxng-search.md
+    - "1Password": docs/user-guide/skills/optional/security/security-1password.md
+    - "Oss Forensics": docs/user-guide/skills/optional/security/security-oss-forensics.md
+    - "Sherlock": docs/user-guide/skills/optional/security/security-sherlock.md
+    - "Development Page Agent": docs/user-guide/skills/optional/web-development/web-development-page-agent.md
+- Руководства:
+  - "With Cron": docs/guides/automate-with-cron.md
+  - "Templates": docs/guides/automation-templates.md
+  - "Bedrock": docs/guides/aws-bedrock.md
+  - "Foundry": docs/guides/azure-foundry.md
+  - "A Hermes Plugin": docs/guides/build-a-hermes-plugin.md
+  - "Script Only": docs/guides/cron-script-only.md
+  - "Troubleshooting": docs/guides/cron-troubleshooting.md
+  - "Briefing Bot": docs/guides/daily-briefing-bot.md
+  - "Patterns": docs/guides/delegation-patterns.md
+  - "Pr Review Agent": docs/guides/github-pr-review-agent.md
+  - "Gemini": docs/guides/google-gemini.md
+  - "Llm On Mac": docs/guides/local-llm-on-mac.md
+  - "Ollama Setup": docs/guides/local-ollama-setup.md
+  - "From Openclaw": docs/guides/migrate-from-openclaw.md
+  - "Oauth": docs/guides/minimax-oauth.md
+  - "Library": docs/guides/python-library.md
+  - "Telegram Assistant": docs/guides/team-telegram-assistant.md
+  - "Tips": docs/guides/tips.md
+  - "MCP With Hermes": docs/guides/use-mcp-with-hermes.md
+  - "Soul With Hermes": docs/guides/use-soul-with-hermes.md
+  - "Voice Mode With Hermes": docs/guides/use-voice-mode-with-hermes.md
+  - "Github Pr Review": docs/guides/webhook-github-pr-review.md
+  - "With Skills": docs/guides/work-with-skills.md
+- Разработчикам:
+  - "Internals": docs/developer-guide/acp-internals.md
+  - "Platform Adapters": docs/developer-guide/adding-platform-adapters.md
+  - "Providers": docs/developer-guide/adding-providers.md
+  - "Tools": docs/developer-guide/adding-tools.md
+  - "Loop": docs/developer-guide/agent-loop.md
+  - "Architecture": docs/developer-guide/architecture.md
+  - "Supervisor": docs/developer-guide/browser-supervisor.md
+  - "Compression And Caching": docs/developer-guide/context-compression-and-caching.md
+  - "Engine Plugin": docs/developer-guide/context-engine-plugin.md
+  - "Contributing": docs/developer-guide/contributing.md
+  - "Skills": docs/developer-guide/creating-skills.md
+  - "Internals": docs/developer-guide/cron-internals.md
+  - "Environments": docs/developer-guide/environments.md
+  - "The CLI": docs/developer-guide/extending-the-cli.md
+  - "Internals": docs/developer-guide/gateway-internals.md
+  - "Gen Provider Plugin": docs/developer-guide/image-gen-provider-plugin.md
+  - "Provider Plugin": docs/developer-guide/memory-provider-plugin.md
+  - "Provider Plugin": docs/developer-guide/model-provider-plugin.md
+  - "Assembly": docs/developer-guide/prompt-assembly.md
+  - "Runtime": docs/developer-guide/provider-runtime.md
+  - "Storage": docs/developer-guide/session-storage.md
+  - "Runtime": docs/developer-guide/tools-runtime.md
+  - "Format": docs/developer-guide/trajectory-format.md
+- Справочник:
+  - "Commands": docs/reference/cli-commands.md
+  - "Variables": docs/reference/environment-variables.md
+  - "Faq": docs/reference/faq.md
+  - "Config Reference": docs/reference/mcp-config-reference.md
+  - "Catalog": docs/reference/model-catalog.md
+  - "Skills Catalog": docs/reference/optional-skills-catalog.md
+  - "Commands": docs/reference/profile-commands.md
+  - "Catalog": docs/reference/skills-catalog.md
+  - "Commands": docs/reference/slash-commands.md
+  - "Reference": docs/reference/tools-reference.md
+  - "Reference": docs/reference/toolsets-reference.md
+- Интеграции:
+  - "Обзор": docs/integrations/index.md
+  - "Providers": docs/integrations/providers.md
+- "Истории пользователей": docs/user-stories.md

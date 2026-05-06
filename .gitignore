@@ -26,3 +26,8 @@ credentials.json
 # Temp files
 *.tmp
 *.temp
+
+# MkDocs build output
+site/
+site_source/
+nav_preview.json
