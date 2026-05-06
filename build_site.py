@@ -75,6 +75,11 @@ def build_nav():
     docs_dir = STAGING_DIR / "docs"
     nav = []
 
+    # Add "Главная" as first entry
+    docs_index = docs_dir / "index.md"
+    if docs_index.exists():
+        nav.append({"Главная": "docs/index.md"})
+
     # Ordered top-level categories (mirrors the original site)
     categories = [
         ("getting-started", "Начало работы"),
@@ -315,7 +320,32 @@ if __name__ == "__main__":
 
     print(f"\n✅ Done!")
     print(f"   Config: mkdocs.yml")
-    print(f"   Source: site_source/")
+    print(f"   Source: staging dir at {STAGING_DIR}")
     print(f"   Nav items: {len(nav)} top-level sections")
+
+    # Create a docs/index.md landing page if none exists
+    docs_index = STAGING_DIR / "docs" / "index.md"
+    if not docs_index.exists():
+        docs_index.write_text(
+            "# Документация Hermes Agent\n\n"
+            "Добро пожаловать в документацию **Hermes Agent** — open-source CLI AI-агента от Nous Research.\n\n"
+            "## Быстрый старт\n\n"
+            "- [Установка](./getting-started/installation.md) — установите Hermes Agent за 60 секунд\n"
+            "- [Быстрый старт](./getting-started/quickstart.md) — начните работу\n"
+            "- [Трейнинг](./getting-started/learning-path.md) — план обучения\n\n"
+            "## Разделы\n\n"
+            "- [Возможности](./user-guide/features/overview.md) — обзор всех функций\n"
+            "- [Конфигурация](./user-guide/configuration.md) — настройка агента\n"
+            "- [Мессенджеры](./user-guide/messaging/index.md) — подключение платформ\n"
+            "- [Навыки](./user-guide/features/skills.md) — установка и создание навыков\n"
+            "- [Руководства](./guides/) — практические сценарии\n"
+            "- [Разработчикам](./developer-guide/) — архитектура и плагины\n"
+            "- [Справочник](./reference/) — CLI, переменные, FAQ\n\n"
+            "---\n\n"
+            "<!-- Source: https://hermes-agent.nousresearch.com/docs -->\n",
+            encoding="utf-8",
+        )
+        print(f"   ✅ Created landing page: docs/index.md")
+
     print(f"\n   To preview locally: mkdocs serve")
     print(f"   To build: mkdocs build")
